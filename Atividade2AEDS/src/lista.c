@@ -42,16 +42,17 @@ void LRemove(Lista *l, Item d){
 void LImprime(Lista *l){
 	for(int i=l->first; i<l->last; i++)
 		printf("%s", l->vet[i].nomes);
-	printf("\n");
+	printf("\n--------------------");
 }
 
 //função que irá comparar o valor de cada posição com a primeira, segunda.. até comparar todas as posiçoes//
 void ComparaValor(Lista *l){
+	printf("\n");
 	for(int i = l->first; i < l->last-1; i++){
 		if(!(l->vet[i].achou)){
 			for(int j = i + 1; j < l->last; j++){
 				if(! (strcmp(l->vet[i].nomes, l->vet[j].nomes)) ){
-					printf("\nNome repetido: %s\n", l->vet[i].nomes);
+					printf("Nome repetido: %s\n", l->vet[i].nomes);
 					l->vet[j].achou = true;
 				}
 			}
@@ -74,8 +75,9 @@ void TrocaCaractere(Lista *l){
 }
 
 void LImprimeNovaLista(Lista *l){
+	printf("\nLista reformulada, nomes repetidos removidos: ");
 	for(int i=l->first; i<l->last; i++)
 		if(!(l->vet[i].achou))
 			printf("\n%s", l->vet[i].nomes);
-	printf("\n");
+	printf("\n-------------------");
 }
