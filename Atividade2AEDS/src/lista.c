@@ -50,12 +50,15 @@ void ComparaValor(Lista *l){
 	printf("\n");
 	for(int i = l->first; i < l->last-1; i++){
 		if(!(l->vet[i].achou)){
+			int count = 0;
 			for(int j = i + 1; j < l->last; j++){
 				if(! (strcmp(l->vet[i].nomes, l->vet[j].nomes)) ){
-					printf("Nome repetido: %s\n", l->vet[i].nomes);
+					count++;
 					l->vet[j].achou = true;
 				}
 			}
+			if(count != 0)
+				printf("O nome '%s' repetiu %d vez(es)\n", l->vet[i].nomes, count);
 		}
 	}
 	LImprimeNovaLista(l);
@@ -75,6 +78,7 @@ void TrocaCaractere(Lista *l){
 }
 
 void LImprimeNovaLista(Lista *l){
+	printf("-------------------");
 	printf("\nLista reformulada, nomes repetidos removidos: ");
 	for(int i=l->first; i<l->last; i++)
 		if(!(l->vet[i].achou))
