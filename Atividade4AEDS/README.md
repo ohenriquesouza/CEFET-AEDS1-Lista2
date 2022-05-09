@@ -35,7 +35,7 @@
     <li><code>#include 'stdio.h'</code></li>
     <li><code>#include 'stdbool.h'</code></li>
 </ul>
-<br/>
+
 <h1>Compilação e execução</h1>
 <p>Para a correta execução do programa, temos as seguintes diretrizes de execução:<p>
 

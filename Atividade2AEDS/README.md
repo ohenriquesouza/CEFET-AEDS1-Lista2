@@ -41,7 +41,7 @@ uma função que, analisando nome por nome, conseguisse remover os que aparecess
     <li><code>#include 'stdbool.h'</code></li>
     <li><code>#include 'string.h'</codde></li>
 </ul>
-<br/>
+
 <h1>Compilação e execução</h1>
 <h1>Compilação e execução</h1>
 <p>Para a correta execução do programa, temos as seguintes diretrizes de execução:<p>
