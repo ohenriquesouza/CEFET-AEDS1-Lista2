@@ -38,7 +38,6 @@ void LRemove(Lista *l, Item d){
 	}
 }
 
-
 void LImprime(Lista *l, int indentifier){
 	if(indentifier == 0){
 		printf("\nCadeia de DNA original: \n");
