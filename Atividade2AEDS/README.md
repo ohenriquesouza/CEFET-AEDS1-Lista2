@@ -43,7 +43,8 @@ uma função que, analisando nome por nome, conseguisse remover os que aparecess
 </ul>
 <br/>
 <h1>Compilação e execução</h1>
-<p>A pilha dinâmica disponibilizada possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:<p>
+<h1>Compilação e execução</h1>
+<p>Para a correta execução do programa, temos as seguintes diretrizes de execução:<p>
 
 
 | Comando                |  Função                                                                                           |                     
