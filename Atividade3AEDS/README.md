@@ -15,7 +15,6 @@
     <ol>2º - O arquivo que contém a <b>MENOR</b> entrada de dados, deve ter o nome "<b>cadeiaDNApesquisa.txt</b>".</ol>
     <ol>3º - O texto dentro de cada documento deve ocupar apenas uma linha, não será reconhecido arquivos que contarem com quebras de linha.</ol>
     <ol>4º - Estes arquivos <b>NÃO</b> devem estar dentro da pasta "src", eles devem estar de fora, junto ao Readme e o Makefile.</ol>
-    <p>---UMA VEZ VERIFICADO OS NOMES DOS ARQUIVOS, PODE-SE PROSSEGUIR COM A EXECUÇÃO---</p>
     </center>
 </ul>
 <br/>
