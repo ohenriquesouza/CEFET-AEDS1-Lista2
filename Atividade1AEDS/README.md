@@ -1,6 +1,6 @@
 # Exercício 1
 <h1>Introdução</h1>
-<p>Segundo o dicinário, um fluxograma é uma representação gráfica de um procedimento, problema ou sistema, cujas etapas ou módulos são ilustrados de forma encadeada por meio de símbolos geométricos interconectados. Existe uma forma certa de se ler um fluxograma para melhor entendimento das informações nele apresentadas.</p>
+<p>Segundo o dicionário, um fluxograma é uma representação gráfica de um procedimento, problema ou sistema, cujas etapas ou módulos são ilustrados de forma encadeada por meio de símbolos geométricos interconectados. Existe uma forma certa de se ler um fluxograma para melhor entendimento das informações nele apresentadas.</p>
 <p>Cada formato de seção signifca uma coisa, como explica a figura abaixo:</p>
 <div align="center">
     <img src="imgs/regras_fluxo.jpg">
