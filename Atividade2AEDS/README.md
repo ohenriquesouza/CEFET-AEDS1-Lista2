@@ -21,17 +21,9 @@ uma função que, analisando nome por nome, conseguisse remover os que aparecess
 
 <h2>Comparando os nomes</h2>
 <p>No fim da função anterior, a função <b>ComparaValor( )</b> é acionada. Esta função recebe apenas a lista como parâmetro e tem como objetivo encontrar, contar e "esconder" os nomes repetidos presentes na lista. A função é iniciada com um for de 'i', que recebe como valor inicial o elemento que ocupa a primeira posição da lista e como valor final, o último elemento da lista - 1, fazendo assim com que percorra todas posições necessárias para comparação. A idéia principal do programa gira em torno da criação de uma variável 'booleana' que recebeu o nome de "achou", ela será responsável pela diferenciação dos nomes que repetiram na lista, ou não. Logo após o primeiro laço for, é criado um if que apenas permitirá a continuidade do programa quando a posição atual do "i" não contar com 'true' atribuído em sua variável "achou". Uma vez verificado que o valor da booleana para a atual posição do "i" se encontra em 'false', uma contador do tipo inteiro é criado, com o objetivo de contar quantas vezes um nome repetiu. Um segundo laço for é criado, este, recebe como valor inicial a próxima posição em relação ao "i" do for anterior e como valor final, o último elemento da lista, fazendo com que ele percorra toda a lista a partir de onde o "i" se encontra. Dentro do segundo for existe mais um if, esse sim será resposável pela comparação dos nomes presentes na lista. Com o auxílio da função <b>strcmp( )</b> oriunda da biblioteca '<code>string.h</code>', o conteúdo da posição "i" (que durante a primeira execução do programa se encontra 'travada' na posição inicial) é comparado com o conteúdo de todas as outras posições da lista, como exige o segundo for. Quando percebe-se que há uma igualdade entre as posições comparadas, é certo afirmar que houve uma repetição de um nome na lista. O contador então recebe um incremento "count++" e a posição na qual foi encontrada a igualdade (repetição), sofre uma atualização no valor da variável "achou" que passa a ser 'true', diferenciando-se assim, dos demais nomes, que por sua vez, permaneceram com 'false' atribuidos a sua variável "achou".</p>
-<b>Comparação dos nomes e troca do valor da variável booleana para cada elemento:</b>
-<div align="center">
-    <img width="700px" src="imgs/comparação_nomes.png">
-</div>
 
-<h2>Imprimindo lista atualiada</h2>
+<h2>Imprimindo lista atualizada</h2>
 <p>Como um dos desafios do exercício era sobre remover os nomes repetidos da lista sem alterar os ponteiros, a solução pensada foi aproveitar da variável "achou" criada e usada na comparação, para selecionar quais dos nomes iriam aparecer no printf e quais não iriam. Com essa lógica, foi criada a função <b>LImprimeNovaLista( )</b> que possui a mesma estrutura da já existente <b>LImprime( )</b>, porém, conta com um if que apenas mostrará aqueles nomes nos quais se mostraram não serem cópias de nomes anteriores. Essa verificação é feita a partir do valor da variável "achou" de cada posição.</p>
-<b>Mostrando nova lista, sem nomes repetidos:</b>
-<div align="center">
-    <img src="imgs/lista_nova.png">
-</div>
 <br/>
 <h1>Pergunta sobre o exercício:</h1>
 <b><h2> ★ Como você gerenciaria os espaçoes em branco para novas inserções?</h2></b>
@@ -39,6 +31,24 @@ uma função que, analisando nome por nome, conseguisse remover os que aparecess
 <b><h2> ★ Qual seria o custo dessas novas inserções?</h2></b>
 <p>O custo computacional envolvido com a nova função sugerida no tópico acima seria de '`O(n²)`', pois conta com dois laços for. É importante dizer que, se preferir, o segundo for pode ser exlcuido, abaixando o custo computacional envolvido para '`O(n)`', a exclusão do segundo laço apenas impedirá que a função verifique automáticamente, antes de inserir, se o novo nome já consta na lista.</p>
 <br/>
+<h1>Exemplo de execução</h1>
+<p>Suponha que o programa leia de um arquivo, a seguinte lista:</p>
+<ul>
+    <li>Pedro</li>
+    <li>Joao</li>
+    <li>Henrique</li>
+    <li>Henrique</li>
+    <li>Joao</li>
+    <li>Alberto</li>
+    <li>Caio</li>
+    <li>Henrique</li>
+    <li>Joao</li>
+    <li>Henrique</li>
+</ul>
+<p>O programa deve retornar para o usuário a lista não contendo nenhum nome repetido e informar quantas vezes cada nome repetiu. É esperado, para esta lista utilizada no exemplo, a seguinte resposta do programa:</p>
+<div align="center">
+    <img src="imgs/exemplobom.png">
+</div>
 <h1>Bibliotecas</h1>
 <p>Para o funcionamento do programa, é necessário incluir as seguintes bibliotecas: 
 <ul>

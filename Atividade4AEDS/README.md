@@ -14,20 +14,19 @@
 <h2>Encontrando a maior soma</h2>
 <p>Para encontrar de fato a maior soma dentro do array, foi utilizada uma lógica de força bruta, onde dois laços 'for' trabalham juntos para a verificação de todos os elementos da lista. Para implementar isso, foi criada a função <b>EncontraMaximaSoma( )</b> que recebe apenas a lista como parâmetro.</p>
 <p>Primeiramente, foi criada uma variável do tipo 'int' de nome "soma_total" e seu valor incial foi igualado a 0. Essa varíavel tem como função armazenar o valor da maior soma encontrada após cada laço de repetição. O primeiro for, tem como valor inicial o primeiro elemento da lista e como valor final, o último da mesma. Sua função é percorrer toda a lista, possibilitando o trabalho do segundo for, onde realmente seram calculadas as somas. Antes de falar sobre o segundo laço, é importante citar que, neste momento, é criada uma nova variável também do tipo 'int' de nome "soma_atual". Essa varável tem como função armazenar temporariamente a soma das posições percorridas no segundo for. Por falar em segundo for, é agora que sua implementação acontece. Recebendo como valor inicial igual a 'i' (primeiro elemento da lista, como sugerido pelo laço for anterior) e rodando até que seu valor seja equivalente ao último elemento do vetor, sua função é somar todas as posições pelas quais ele irá passar e guardá-las na variável "soma_atual". O cálculo é feito somando o valor do elemento presente na posição atual do "j", com o valor do elemento da posição seguinte.</p>
-<b>Soma de todos os elementos que ocorre dentro do segundo laço FOR:</b>
-<div align="center">
-    <img src="imgs/soma_segundo_for.png">
-</div>
+
 <br/>
 <p>Perceba que desta maneira, é possível afirmar que todas as posições serão somadas em sequência, uma vez que a posição atual sempre é somada com a próxima e vice versa.</p>
 <br/>
 <p>Uma vez armazenado um valor na varável "soma_atual" (depois de um ciclo do segundo for), esta, é comparada com a variável crianda anteriormente, a "soma_total". Lógicamente, a primeira vez que o algoritmo rodar, o valor da soma total sempre será inferior a soma atual, pois foi inicializada como 0. Porém, a partir do segundo ciclo, os valores já podem ser devidamente comparados. Caso seja percebido que a variável "soma_atual" possui valor superior a da soma total, "soma_total" recebe o valor da soma atual, caso contrário, soma total permanece com o valor que ali havia. Isso garantirá que "soma_total" sempre estará com a maior soma possível entre os elementos da lista.</p>
 <b>Comparação das variáveis de soma, visando atribuir sempre o maior valor a "soma_total":</b>
-<div align="center">
-    <img src="imgs/comparações.png">
-</div>
 <br/>
-
+<h1>Exemplo de execução</h1>
+<p>Para exemplificar o funcionamento do código, suponha que o usuário escolheu que trabalhrá com um vetor de tamanho 6. Após preencher o vetor com valores aleatórios, o programa terá um vetor para analisar do tipo: <b>[ 5 ] [ 2 ] [ -3 ] [ 6 ] [ 8 ] [ 4 ]</b>.</p>
+<p>Com estes valores de exemplo, é esperado que o programa retorne para o usuário da seguinte forma:</p>
+<div align="center">
+    <img src="imgs/exemplobom.png">
+</div>
 <h1>Bibliotecas</h1>
 <p>Para o funcionamento do programa, é necessário incluir as seguintes bibliotecas: 
 <ul>
