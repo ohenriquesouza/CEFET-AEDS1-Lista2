@@ -25,11 +25,11 @@ uma função que, analisando nome por nome, conseguisse remover os que aparecess
 <h2>Imprimindo lista atualizada</h2>
 <p>Como um dos desafios do exercício era sobre remover os nomes repetidos da lista sem alterar os ponteiros, a solução pensada foi aproveitar da variável "achou" criada e usada na comparação, para selecionar quais dos nomes iriam aparecer no printf e quais não iriam. Com essa lógica, foi criada a função <b>LImprimeNovaLista( )</b> que possui a mesma estrutura da já existente <b>LImprime( )</b>, porém, conta com um if que apenas mostrará aqueles nomes nos quais se mostraram não serem cópias de nomes anteriores. Essa verificação é feita a partir do valor da variável "achou" de cada posição.</p>
 <br/>
-<h1>Pergunta sobre o exercício:</h1>
+<h1>Perguntas sobre o exercício:</h1>
 <b><h2> ★ Como você gerenciaria os espaçoes em branco para novas inserções?</h2></b>
 <p>Como citado na seção <i>Lógica utilizada</i>, o programa trata a "exclusão" dos nomes repetidos atribuindo um valor '<i>true</i>' para a a variável booleana 'achou' na posição atual. Para inserções futuras ocuparem estes espaços onde fora constatado que existia um nome repetido, seria criada uma nova função que, com o auxílio de uma estrutura for, percorreria toda a lista. Um if interno rodaria procurando as posições com valor = '<i>true</i>' e, encontrando, poderia ser feita a inserção de um novo nome aquela posição. Um segundo for então, percorreria novamente toda extensão da lista enquanto um if, verifica se o novo nome inserido já não consta em uma das posições. Certificando a validade do novo nome (não consta na lista), seria então adicionado a posição que antes constava com um espaço em branco, chamando a <b>LInsert( )</b>.
 <b><h2> ★ Qual seria o custo dessas novas inserções?</h2></b>
-<p>O custo computacional envolvido com a nova função sugerida no tópico acima seria de '`O(n²)`', pois conta com dois laços for. É importante dizer que, se preferir, o segundo for pode ser exlcuido, abaixando o custo computacional envolvido para '`O(n)`', a exclusão do segundo laço apenas impedirá que a função verifique automáticamente, antes de inserir, se o novo nome já consta na lista.</p>
+<p>O custo computacional envolvido com a nova função sugerida no tópico acima seria de 'O(n²)', pois conta com dois laços for. É importante dizer que, se preferir, o segundo for pode ser exlcuido, abaixando o custo computacional envolvido para 'O(n)', a exclusão do segundo laço apenas impedirá que a função verifique automáticamente, antes de inserir, se o novo nome já consta na lista.</p>
 <br/>
 <h1>Exemplo de execução</h1>
 <p>Suponha que o programa leia de um arquivo, a seguinte lista:</p>
