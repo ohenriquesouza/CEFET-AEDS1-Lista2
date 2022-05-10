@@ -9,7 +9,7 @@
 #define MAXTAM 100
 
 typedef struct Item{
-	char cotons[4];
+	char codons[4];
 	bool compativel;
 }Item;
 

@@ -16,7 +16,7 @@ int main(){
     cadeiaINICIAL = fopen("cadeiaDNAinicial.txt", "r");
 
     //Insercao do conteudo do arquivo na lista//
-    while(fgets(aux.cotons, 4, cadeiaINICIAL) != NULL){
+    while(fgets(aux.codons, 4, cadeiaINICIAL) != NULL){
         LInsert(&l, aux);
     }
 
@@ -32,7 +32,7 @@ int main(){
 
     cadeiaPESQUISA = fopen("cadeiaDNApesquisa.txt", "r");
 
-    while(fgets(aux.cotons, 4, cadeiaPESQUISA) != NULL){
+    while(fgets(aux.codons, 4, cadeiaPESQUISA) != NULL){
         LInsert(&l2, aux);
     }
 

@@ -28,7 +28,7 @@ void LRemove(Lista *l, Item d){
 		printf("LISTA VAZIA!\n");
 	else{
 		for(int i=l->first; i<l->last; i++)
-			if(l->vet[i].cotons == d.cotons){
+			if(l->vet[i].codons == d.codons){
 				Swap(&l->vet[i], &l->vet[i+1]);
 				ok = true;	
 			}
@@ -43,14 +43,14 @@ void LImprime(Lista *l, int indentifier){
 		printf("\nCadeia de DNA original: \n");
 		int c = 1;
 		for(int i=l->first; i<l->last; i++){
-			printf("%dª posicao: %s\n", c, l->vet[i].cotons);
+			printf("%dª posicao: %s\n", c, l->vet[i].codons);
         	c++;
     	}
 	}else{
 		printf("\nCadeia de DNA que sera comparada: \n");
 		int c = 1;
 		for(int i=l->first; i<l->last; i++){
-			printf("%dª posicao: %s\n", c, l->vet[i].cotons);
+			printf("%dª posicao: %s\n", c, l->vet[i].codons);
         	c++;
     	}
 	}
@@ -63,11 +63,11 @@ void ComparaPosicoes(Lista *l, Lista *l2){
 	else{
 		for(int i = l2->first; i < l2->last; i++){
 			for(int j =l->first; j < l->last; j++){
-				if(! (strcmp(l->vet[j].cotons, l2->vet[i].cotons))){
+				if(! (strcmp(l->vet[j].codons, l2->vet[i].codons))){
 					printf("\nFoi encontrada uma igualdade na posicao '%d'.", j + 1);
 					aux += j;
 					for(int k = i; k < l->last; k++){
-						if(! (strcmp(l->vet[j += 1].cotons, l2->vet[i += 1].cotons))){
+						if(! (strcmp(l->vet[j += 1].codons, l2->vet[i += 1].codons))){
 							printf("\nMaxima cadeia formada entre a posicao '%d' e '%d'.", aux, j + 1);
 						}else{
 							printf("\nQuebra da maxima cadeia.\n");
