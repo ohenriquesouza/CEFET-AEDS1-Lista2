@@ -5,7 +5,7 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-#define MAXTAM 10
+#define MAXTAM 100
 
 typedef struct Item{
 	int numeros;
